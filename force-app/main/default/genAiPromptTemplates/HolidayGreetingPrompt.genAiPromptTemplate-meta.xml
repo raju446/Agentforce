@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>1HWr5lrtXnhnpuE1CZsHPLr20187ZdQqc9BaHqpVuXc=_1</activeVersionIdentifier>
+    <developerName>HolidayGreetingPrompt</developerName>
+    <masterLabel>HolidayGreetingPrompt</masterLabel>
+    <templateVersions>
+        <content>Write a warm holiday greeting for my {!$Input:Relationship}.
+
+Tone Guide:
+If the relationship is professional (e.g., Colleague, Boss), keep it polite and concise.
+If the relationship is personal (e.g., Friend, Family), make it heartfelt and cheerful.
+Only return the text of the message itself.
+Do not show the sender name, relationship, or recipient name
+
+Message Length:
+The generated message length should always be less than 300 characters.
+
+</content>
+        <inputs>
+            <apiName>Relationship</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Relationship</masterLabel>
+            <referenceName>Input:Relationship</referenceName>
+            <required>false</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>1HWr5lrtXnhnpuE1CZsHPLr20187ZdQqc9BaHqpVuXc=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
